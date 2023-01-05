@@ -6,7 +6,7 @@ interface StarIconProps {
   tabIndex?: number,
   onMouseEnter?: () => void,
   onMouseLeave?: () => void,
-  onKeyDown?: () => void,
+  onKeyDown?: (e: React.KeyboardEvent) => void,
   onClick?: () => void
 }
 

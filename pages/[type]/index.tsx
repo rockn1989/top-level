@@ -17,12 +17,12 @@ const Type = ({ firstCategory }: TypeProps) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: firstLevelMenu.map(m => `/${m.route}`),
-    fallback: true
+    fallback: false
   };
 };
 
 
-export const getStaticProps: GetStaticProps<HomeProps> = async ({ params }: GetStaticPropsContext<ParsedUrlQuery>) => {
+export const getStaticProps: GetStaticProps<TypeProps> = async ({ params }: GetStaticPropsContext<ParsedUrlQuery>) => {
   if (!params) {
     return {
       notFound: true

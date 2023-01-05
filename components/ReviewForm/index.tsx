@@ -34,7 +34,7 @@ const ReviewForm = ({ productId, isOpened, className, ...props }: ReviewFormProp
       }
 
     } catch (e) {
-      setIsError(e.message);
+      setIsError((e as Error).message);
     }
   };
 
